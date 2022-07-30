@@ -1,0 +1,11 @@
+- name: ffq
+  command: nextflow run tests/modules/ffq -entry test_ffq -c tests/config/nextflow.config
+  tags:
+    - ffq
+  files:
+    - path: output/ffq/SRR12826465_1.fastq.gz
+      md5sum: 2753c95c5221ddd7cf9d0a77ef362926
+    - path: output/ffq/SRR12826465_2.fastq.gz
+      md5sum: a677042f60aec8c561e612869317a56c
+    - path: output/ffq/versions.yml
+      md5sum: f0f710ea9be48cc1c85433d4b94def3d
