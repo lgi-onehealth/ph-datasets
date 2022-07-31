@@ -1,0 +1,13 @@
+- name: process_metata
+  command: nextflow run tests/modules/process_metadata -entry test_process_metadata -c tests/config/nextflow.config
+  tags:
+    - process_metadata
+  files:
+    - path: output/process_metadata/metadata.csv
+      md5sum: 2906f6bd571dfb4bd8ed68aab7934750
+    - path: output/process_metatada/sra.csv
+      md5sum: 41fda1ee533b19d302939eef95ae5948
+    - path: output/process_metatada/metadataset.yml
+      md5sum: f4d8dc9e347df1a0c9d8bee6f3c477ff
+    - path: output/process_metadata/versions.yml
+      md5sum: 53acb41f6dba51996c400b353593bde1
