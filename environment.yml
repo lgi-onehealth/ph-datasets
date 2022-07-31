@@ -1,0 +1,11 @@
+name: ph-datasets
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - nextflow
+    - mamba
+    - python=3.10
+    - pytest
+    - pytest-workflow
