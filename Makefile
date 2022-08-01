@@ -12,6 +12,5 @@ test_all:
 test_docker:
 	PROFILE=docker pytest --symlink --kwdof --color=yes --git-aware
 
-
 test_wf:
 	nextflow run main.nf -resume --enable_conda
