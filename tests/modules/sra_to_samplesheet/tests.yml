@@ -4,4 +4,10 @@
     - sra_to_samplesheet
   files:
     - path: output/sra_to_samplesheet/test_samplesheet.csv
-      md5sum: b7546c2de2fe87652aaa25f7f4e32ff4
+      contains:
+        - "sample_id"
+        - "fastq_1"
+        - "fastq_2"
+        - "test"
+        - "test_1.fastq.gz"
+        - "test_2.fastq.gz"
