@@ -3,10 +3,8 @@ process FFQ {
     tag "$meta.id"
     label 'process_low'
 
-    conda (params.enable_conda ? "bioconda::ffq=0.2.1 conda-forge::jq=1.6" : null)
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/YOUR-TOOL-HERE':
-        'quay.io/biocontainers/YOUR-TOOL-HERE' }"
+    conda (params.enable_conda ? "bioconda::ffq=0.2.1" : null)
+    container "andersgs/ffq:v0.2.1"
 
     input:
     val(meta)
