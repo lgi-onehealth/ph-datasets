@@ -3,5 +3,5 @@
   tags:
     - sra_to_samplesheet
   files:
-    - path: output/sra_to_samplesheet/test_samplesheeet.csv
-      md5sum: ba772889fbac6b613d2192020ffdf8bf
+    - path: output/sra_to_samplesheet/test_samplesheet.csv
+      md5sum: b7546c2de2fe87652aaa25f7f4e32ff4
