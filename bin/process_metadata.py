@@ -36,15 +36,18 @@ def parse_metadata(input_file):
         reader = csv.reader(f, delimiter="\t")
         # Skip initial rows
         line = next(reader)
+        line = [field.strip() for field in line]
         while len(line[0]) > 0:
             dataset_meta[line[0]] = line[1]
             line = next(reader)
         # Read header row
         header = next(reader)
+        header = [field.strip() for field in header]
         # Read metadata rows
         metadata = []
         for row in reader:
-            if row:
+            if row and len(row[0]) > 0:
+                row = [field.strip() for field in row]
                 metadata.append(dict(zip(header, row)))
     return metadata, dataset_meta
 
@@ -57,6 +60,8 @@ def main():
     metadata, dataset_meta = parse_metadata(args.input)
     with open(args.outmeta, "w") as f:
         writer = csv.writer(f, delimiter=",")
+        header = list(metadata[0].keys())
+        writer.writerow(header)
         for row in metadata:
             writer.writerow(row.values())
     with open(args.outsra, "w") as f:
