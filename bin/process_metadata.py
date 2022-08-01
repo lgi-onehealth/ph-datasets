@@ -9,6 +9,8 @@ Given a TSV file with metadata, create:
 import argparse
 import csv
 
+__version__ = "1.0.0"
+
 def parse_args():
     """
     Parse command line arguments
@@ -18,6 +20,7 @@ def parse_args():
     parser.add_argument("-m", "--outmeta", help="Output file", default="metadata.csv")
     parser.add_argument("-s", "--outsra", help="Output file", default="sra.csv")
     parser.add_argument("-y", "--outyaml", help="Output file", default="metadataset.yml")
+    parser.add_argument("-v", "--version", action="version", version="%(prog)s {}".format(__version__))
     return parser.parse_args()
 
 
