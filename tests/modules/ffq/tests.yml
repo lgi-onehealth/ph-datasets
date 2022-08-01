@@ -1,5 +1,5 @@
 - name: ffq
-  command: nextflow run tests/modules/ffq -entry test_ffq -c tests/config/nextflow.config
+  command: nextflow -C tests/config/nextflow.config run tests/modules/ffq -entry test_ffq 
   tags:
     - ffq
   files:
@@ -8,4 +8,4 @@
     - path: output/ffq/SRR12826465_2.fastq.gz
       md5sum: a677042f60aec8c561e612869317a56c
     - path: output/ffq/versions.yml
-      md5sum: f0f710ea9be48cc1c85433d4b94def3d
+      md5sum: fa2f486f05fc9cc5a237fec430ebe2b9
