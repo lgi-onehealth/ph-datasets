@@ -26,7 +26,8 @@ process PROCESS_METADATA {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        python: \$(echo \$(python --version 2>&1) | sed 's/^.*Python //g' ))
+        python: \$(echo \$(python --version 2>&1) | sed 's/^.*Python //g' )
+        process_metadata.py: \$(echo \$(process_metadata.py --version) | sed 's/^.*process_metadata.py //g' )
     END_VERSIONS
     """
 }
