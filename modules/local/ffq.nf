@@ -19,8 +19,6 @@ process FFQ {
     task.ext.when == null || task.ext.when
 
     script:
-    def args = task.ext.args ?: ''
-    def prefix = task.ext.prefix ?: "${meta.id}"
     """
     ffq --ftp ${meta.id} \
         | grep -Eo '"url": "[^"]*"' \
@@ -30,7 +28,6 @@ process FFQ {
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         ffq: 0.2.1
-        jq: 1.6
     END_VERSIONS
     """
 }
