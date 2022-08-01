@@ -14,7 +14,7 @@ process PROCESS_METADATA {
     output:
     path "metadata.csv", emit: metadata
     path "sra.csv", emit: sra
-    path "metadataset.yaml", emit: metadataset
+    path "metadataset.yml", emit: metadataset
     path "versions.yml"           , emit: versions
 
     when:
