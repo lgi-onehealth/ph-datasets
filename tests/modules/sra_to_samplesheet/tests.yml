@@ -1,5 +1,5 @@
 - name: sra_to_samplesheet
-  command: nextflow  -C tests/config/nextflow.config run tests/modules/sra_to_sammplesheet -entry test_sra_to_samplsheet
+  command: nextflow  -C tests/config/nextflow.config run tests/modules/sra_to_samplesheet -entry test_sra_to_samplsheet
   tags:
     - sra_to_samplesheet
   files:
