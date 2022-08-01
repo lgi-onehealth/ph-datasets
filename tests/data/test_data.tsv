@@ -1,0 +1,10 @@
+Organism	Zika virus 										
+Outbreak	Zika in the Americas										
+pmid											
+tree											
+source	Anders Goncalves da Silva										
+dataType	empirical										
+											
+biosample_acc	strain	genBankAssembly	SRArun_acc	outbreak	dataSetName	suggestedReference	sha256sumAssembly	sha256sumRead1	sha256sumRead2	fileName	voucherContact
+SAMN24044040	ParaibavG 		SRR17231514	outgroup	Zika in Americas	TRUE		3c7dbc11736d7b1502b1a078bc26e3a3648745c2be13b7906adcfe0a0e9224d8	aaa20de2feb00f1054f01948b6ed702eada7fcee90f78446f40e491408d87abc		
+SAMN24044042	HondurasvG 		SRR17231530	outgroup	Zika in Americas	FALSE		39e05e27314420c3ed3401f933671866d11089c06e6ea322ff6228ce224dd56c	12d9e06005dbef1c99ee4a144c1cfa8e5d4567d1d9509318c1b26f7f720e6cbf		
