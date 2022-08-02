@@ -1,6 +1,8 @@
 // The main workflow
 include { PROCESS_METADATA } from '../modules/local/process_metadata.nf'
 include { FFQ } from '../modules/local/ffq.nf'
+include { SRA_TO_SAMPLESHEET } from '../modules/local/sra_to_samplesheet.nf'
+include { MERGE_SAMPLESHEETS } from '../modules/local/merge_samplesheets.nf'
 
 if (params.list) {
     list_sources()
@@ -21,9 +23,19 @@ workflow PH_DATASETS {
                     .map {sra_id -> [id: sra_id.trim()]}
                     .take(2)
         FFQ(sra_ids)
+        samplesheet_ch = FFQ.out.reads.map {meta, reads ->
+                         meta.single_end = !(reads instanceof List && reads.size() == 2)
+                         return [meta, reads]
+                        }
+        SRA_TO_SAMPLESHEET(samplesheet_ch)
+        merge_samplesheet_ch = SRA_TO_SAMPLESHEET.out.samplesheet
+                                .map {meta, samplesheet -> samplesheet}
+                                .collect()
+        MERGE_SAMPLESHEETS(merge_samplesheet_ch)
     emit:
         metadata = PROCESS_METADATA.out.metadata
         sra_id = PROCESS_METADATA.out.sra
+        reads = samplesheet_ch
 }   
 
 
