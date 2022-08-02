@@ -1,6 +1,7 @@
 // The main workflow
 include { PROCESS_METADATA } from '../modules/local/process_metadata.nf'
 include { FFQ } from '../modules/local/ffq.nf'
+include { DOWNLOAD_FASTQ } from '../modules/local/download_fastq.nf'
 include { SRA_TO_SAMPLESHEET } from '../modules/local/sra_to_samplesheet.nf'
 include { MERGE_SAMPLESHEETS } from '../modules/local/merge_samplesheets.nf'
 
@@ -22,7 +23,8 @@ workflow PH_DATASETS {
                     .splitText()
                     .map {sra_id -> [id: sra_id.trim()]}
         FFQ(sra_ids)
-        samplesheet_ch = FFQ.out.reads.map {meta, reads ->
+        DOWNLOAD_FASTQ(FFQ.out.ffq)
+        samplesheet_ch = DOWNLOAD_FASTQ.out.reads.map {meta, reads ->
                          meta.single_end = !(reads instanceof List && reads.size() == 2)
                          return [meta, reads]
                         }
