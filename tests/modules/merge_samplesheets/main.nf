@@ -5,8 +5,8 @@ include { MERGE_SAMPLESHEETS } from '../../../modules/local/merge_samplesheets.n
 workflow test_merge_samplesheets {
     
     input = [
-        file("$baseDir/tests/data/test1_samplesheet.csv"),
-        file("$baseDir/tests/data/test2_samplesheet.csv")
+        file("$launchDir/tests/data/test1_samplesheet.csv"),
+        file("$launchDir/tests/data/test2_samplesheet.csv")
     ]
     MERGE_SAMPLESHEETS ( input )
 
