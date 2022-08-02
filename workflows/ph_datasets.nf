@@ -45,7 +45,7 @@ workflow PH_DATASETS {
         
         MERGE_SAMPLESHEETS(merge_samplesheet_ch)
         versions_ch = versions_ch.mix(MERGE_SAMPLESHEETS.out.versions)
-        versions_ch.unique().collectFile(name: 'software_versions.yml', storeDir: "${params.outdir}/pipeline_trace/")
+        versions_ch.unique().collectFile(name: 'software_versions.yml', storeDir: "${params.tracedir}")
 
     emit:
         metadata = PROCESS_METADATA.out.metadata
