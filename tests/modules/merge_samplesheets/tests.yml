@@ -6,4 +6,4 @@
     - path: output/merge_samplesheets/samplesheet.csv
       md5sum: 9a8830e5e9a730026fc19fb77e6e7d4f
     - path: output/merge_samplesheets/versions.yml
-      md5sum: dc2c7a77749dfb914e98bb19f16ed53d
+      md5sum: c67c51a79d5f54bfa098c98789bda5f8

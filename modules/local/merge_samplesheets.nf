@@ -2,7 +2,7 @@ process MERGE_SAMPLESHEETS {
     tag "samplesheet.csv"
     label 'process_low'
 
-    conda (params.enable_conda ? "bioconda::csvtk=0.23.0" : null)
+    conda (params.enable_conda ? "bioconda::csvtk=0.24.0" : null)
     container "andersgs/csvtk:v0.24.0"
 
     input:
