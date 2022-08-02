@@ -3,9 +3,7 @@
   tags:
     - ffq
   files:
-    - path: output/ffq/SRR12826465_1.fastq.gz
-      md5sum: 2753c95c5221ddd7cf9d0a77ef362926
-    - path: output/ffq/SRR12826465_2.fastq.gz
-      md5sum: a677042f60aec8c561e612869317a56c
+    - path: output/ffq/SRR12826465_ffq.json
+      md5sum: f3d7a140b78e2b8c5fc9f42ae57060b5
     - path: output/ffq/versions.yml
       md5sum: fa2f486f05fc9cc5a237fec430ebe2b9

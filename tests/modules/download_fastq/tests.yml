@@ -1,0 +1,11 @@
+- name: download_fastq
+  command: nextflow -C tests/config/nextflow.config run tests/modules/download_fastq -entry test_download_fastq
+  tags:
+    - download_fastq
+  files:
+    - path: output/download_fastq/SRR12826465_1.fastq.gz
+      md5sum: 2753c95c5221ddd7cf9d0a77ef362926
+    - path: output/download_fastq/SRR12826465_2.fastq.gz
+      md5sum: a677042f60aec8c561e612869317a56c
+    - path: output/download_fastq/versions.yml
+      md5sum: fa2f486f05fc9cc5a237fec430ebe2b9

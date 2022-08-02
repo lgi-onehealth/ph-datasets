@@ -1,0 +1,22 @@
+[
+    {
+        "accession": "SRR12826465",
+        "filename": "SRR12826465_1.fastq.gz",
+        "filetype": "fastq",
+        "filesize": 144,
+        "filenumber": 1,
+        "md5": "2753c95c5221ddd7cf9d0a77ef362926",
+        "urltype": "ftp",
+        "url": "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR128/065/SRR12826465/SRR12826465_1.fastq.gz"
+    },
+    {
+        "accession": "SRR12826465",
+        "filename": "SRR12826465_2.fastq.gz",
+        "filetype": "fastq",
+        "filesize": 173,
+        "filenumber": 2,
+        "md5": "a677042f60aec8c561e612869317a56c",
+        "urltype": "ftp",
+        "url": "ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR128/065/SRR12826465/SRR12826465_2.fastq.gz"
+    }
+]
