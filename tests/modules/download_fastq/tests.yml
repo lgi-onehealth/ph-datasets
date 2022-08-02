@@ -8,4 +8,4 @@
     - path: output/download_fastq/SRR12826465_2.fastq.gz
       md5sum: a677042f60aec8c561e612869317a56c
     - path: output/download_fastq/versions.yml
-      md5sum: fa2f486f05fc9cc5a237fec430ebe2b9
+      md5sum: 2732a901ba2ba52e7a2b71a507cb0469
