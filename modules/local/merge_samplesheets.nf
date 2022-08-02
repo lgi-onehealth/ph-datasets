@@ -1,5 +1,5 @@
 process MERGE_SAMPLESHEETS {
-    tag "${}"
+    tag "samplesheet.csv"
     label 'process_low'
 
     conda (params.enable_conda ? "bioconda::csvtk=0.23.0" : null)
