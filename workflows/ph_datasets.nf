@@ -21,7 +21,6 @@ workflow PH_DATASETS {
         sra_ids = PROCESS_METADATA.out.sra
                     .splitText()
                     .map {sra_id -> [id: sra_id.trim()]}
-                    .take(2)
         FFQ(sra_ids)
         samplesheet_ch = FFQ.out.reads.map {meta, reads ->
                          meta.single_end = !(reads instanceof List && reads.size() == 2)
