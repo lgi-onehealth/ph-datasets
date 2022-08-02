@@ -21,7 +21,7 @@ process MERGE_SAMPLESHEETS {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        csvtk: \$(echo \$(csvtk version 2>&1) | sed 's/^.*csvtk //g' ))
+        csvtk: \$(echo \$(csvtk version 2>&1) | sed 's/^.*csvtk //g' )
     END_VERSIONS
     """
 }
