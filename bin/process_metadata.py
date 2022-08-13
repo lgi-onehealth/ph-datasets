@@ -40,6 +40,8 @@ def parse_metadata(input_file):
         while len(line[0]) > 0:
             dataset_meta[line[0]] = line[1]
             line = next(reader)
+            if len(line) == 0:
+                break
         # Read header row
         header = next(reader)
         header = [field.strip() for field in header]
@@ -67,7 +69,8 @@ def main():
     with open(args.outsra, "w") as f:
         writer = csv.writer(f, delimiter=",")
         for row in metadata:
-            writer.writerow([row["SRArun_acc"]])
+            if any(prefix in row['SRArun_acc'] for prefix in ['SRR', 'ERR', 'DRR']):
+                writer.writerow([row["SRArun_acc"]])    
     with open(args.outyaml, "w") as f:
         f.write("---\n")
         f.write("dataset_metadata:\n")
