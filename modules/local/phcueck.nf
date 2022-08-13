@@ -24,7 +24,7 @@ process PHCUECK {
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        phcueck: \$(echo \$(phcue-ck --version 2>&1) | sed 's/^.*phcue-ck //g' ))
+        phcueck: \$(echo \$(phcue-ck --version 2>&1) | sed 's/^.*phcue-ck //g' )
     END_VERSIONS
     """
 }
