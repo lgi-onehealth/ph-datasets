@@ -1,6 +1,6 @@
 // The main workflow
 include { PROCESS_METADATA } from '../modules/local/process_metadata.nf'
-include { FFQ } from '../modules/local/ffq.nf'
+include { PHCUECK } from '../modules/local/phcueck.nf'
 include { DOWNLOAD_FASTQ } from '../modules/local/download_fastq.nf'
 include { SRA_TO_SAMPLESHEET } from '../modules/local/sra_to_samplesheet.nf'
 include { MERGE_SAMPLESHEETS } from '../modules/local/merge_samplesheets.nf'
@@ -26,10 +26,10 @@ workflow PH_DATASETS {
         sra_ids = PROCESS_METADATA.out.sra
                     .splitText()
                     .map {sra_id -> [id: sra_id.trim()]}
-        FFQ(sra_ids)
-        versions_ch = versions_ch.mix(FFQ.out.versions)
+        PHCUECK(sra_ids)
+        versions_ch = versions_ch.mix(PHCUECK.out.versions)
 
-        DOWNLOAD_FASTQ(FFQ.out.ffq)
+        DOWNLOAD_FASTQ(PHCUECK.out.json)
         versions_ch = versions_ch.mix(DOWNLOAD_FASTQ.out.versions)
 
         samplesheet_ch = DOWNLOAD_FASTQ.out.reads.map {meta, reads ->
