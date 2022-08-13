@@ -19,7 +19,8 @@ process PHCUECK {
     """
     phcue-ck \\
         ${args} \\
-        -a ${meta.id}
+        -a ${meta.id} \\
+        > > ${meta.id}_phcueck.json
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
