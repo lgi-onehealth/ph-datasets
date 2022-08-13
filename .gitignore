@@ -3,3 +3,4 @@ work
 output
 datasets
 .pytest_cache
+.vscode/
