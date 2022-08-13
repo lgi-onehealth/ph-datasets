@@ -3,7 +3,7 @@ process DOWNLOAD_FASTQ {
     maxForks params.max_downloads
 
     conda (params.enable_conda ? "conda-forge::curl=7.83.1" : null)
-    container "andersgs/ffq:v0.2.1"
+    container "lighthousegenomics/curl:7.83.1"
 
     input:
     tuple val(meta), val(ffq)
