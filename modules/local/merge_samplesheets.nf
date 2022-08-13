@@ -3,7 +3,7 @@ process MERGE_SAMPLESHEETS {
     label 'process_low'
 
     conda (params.enable_conda ? "bioconda::csvtk=0.24.0" : null)
-    container "andersgs/csvtk:v0.24.0"
+    container "lighthousegenomics/csvtk:0.24.0"
 
     input:
     path(samplesheets)
