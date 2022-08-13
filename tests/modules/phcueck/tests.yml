@@ -4,6 +4,6 @@
     - phcueck
   files:
     - path: output/phcueck/SRR12826465_phcueck.json
-      md5sum: f3d7a140b78e2b8c5fc9f42ae57060b5
+      md5sum: 6a040cb99151bbeef45fd69840ae7361
     - path: output/phcueck/versions.yml
-      md5sum: fa2f486f05fc9cc5a237fec430ebe2b9
+      md5sum: 954fcea51e1d14bb30b496a933598a4c
