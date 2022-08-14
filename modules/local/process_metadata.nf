@@ -4,7 +4,7 @@ process PROCESS_METADATA {
     label 'process_low'
 
     conda (params.enable_conda ? "python=3.10" : null)
-    container "python:3.10.5-slim-bullseye"
+    container "lighthousegenomics/python:3.10"
 
     input:
     path metadata
