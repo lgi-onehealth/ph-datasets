@@ -1,4 +1,4 @@
-PROFILE := docker
+PROFILE ?= docker
 
 .PHONY: clean test_modules test_all
 
