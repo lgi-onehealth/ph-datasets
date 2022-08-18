@@ -1,7 +1,7 @@
 process PHCUECK {
     tag "${meta.id}"
     label 'process_low'
-    conda null
+    conda (params.enable_conda ? "bioconda::phcue-ck=0.1.2" : null)
     container "lighthousegenomics/phcue-ck:v0.1.2"
 
     input:
