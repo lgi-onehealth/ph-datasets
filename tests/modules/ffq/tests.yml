@@ -1,9 +1,0 @@
-- name: ffq
-  command: nextflow -C tests/config/nextflow.config run tests/modules/ffq -entry test_ffq 
-  tags:
-    - ffq
-  files:
-    - path: output/ffq/SRR12826465_ffq.json
-      md5sum: f3d7a140b78e2b8c5fc9f42ae57060b5
-    - path: output/ffq/versions.yml
-      md5sum: fa2f486f05fc9cc5a237fec430ebe2b9
