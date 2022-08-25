@@ -1,9 +1,5 @@
 <div align="center" width = 100%>
-    <picture>
-        <source srcset="assets/logo-dark.png" media="(prefers-color-scheme:light)">
-        <source srcset="assets/logo-dark.png" media="(prefers-color-scheme:dark)">
-        <img src="assets/logo.png">
-    </picture>
+    <img src="assets/logo-dark.png">
 </div>
 
 # ph-datasets: A Nextflow workflow for downloading benchmarking public health datasets
