@@ -102,3 +102,15 @@ datasets
     └── software_versions.yml
 ```
 
+## Workflow parameters
+
+| Parameter         | Value       | Description                                                                                                               |
+| ----------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `--key`           | `<string>`  | The key of the dataset to download                                                                                        |
+| `--list`          | `<boolean>` | List the available datasets                                                                                               |
+| `--outdir`        | `<string>`  | The output directory (default: `datasets`)                                                                                |
+| `--tracedir`      | `<string>`  | Where to store pipeline trace reports (default: `$OUTDIR/pipeline_info`)                                                  |
+| `--max-downloads` | `<int>`     | Maximum number of simultaenous downloads to run (default: 6)                                                              |
+| `--publish-mode`  | `<striing>` | Mode to publish data into the `$OUTDIR` (default: copy). Options are: copy, symlink, move, link, relink, copyNoFollow[^1] |
+
+[^1]: The different options are described in the Nextflow documentation [here](https://www.nextflow.io/docs/latest/process.html#publishdir) – scroll down to the `Table of publish modes`.
