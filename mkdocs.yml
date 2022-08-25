@@ -1,0 +1,32 @@
+site_name: ph-datasets
+nav:
+  - "index.md"
+  - "installation.md"
+  - "usage.md"
+  - "examples.md"
+copyright: "Lighthouse Genomics, Inc. 2022"
+site_url: https://lgi-onehealth.github.io/ph-datasets/
+repo_url: "https://github.com/lgi-onehealth/ph-datasets"
+theme:
+  name: material
+  logo: "assets/logo-dark-icon.svg"
+  palette:
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: deep purple
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    primary: deep purple
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  icon:
+    repo: material/github
+extra_css:
+  - stylesheets/extra.css
