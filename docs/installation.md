@@ -29,3 +29,20 @@ Here is an example command to list all the available datasets using Nextflow ins
 ```bash
 docker run -it -v $(pwd):/data nextflow run lgi-onehealth/ph-datasets -profile docker --list
 ```
+
+## Running a test
+
+Once you have nextflow installed, you can run a small test to make sure it is working.
+
+```bash
+mkdir test_run && cd test_run
+nextflow run lgi-onehealth/ph-datasets -profile test[,<conda|docker>]
+```
+
+To run the test, you need to set `-profile` to `test`. If you don't have the tools installed in your `$PATH`, you can also set `-profile` to `test,docker` to run with Docker or `test,conda` to run with Conda.
+
+This will download a small dummy dataset created to test the pipeline. It consists of 
+sequence data for two Zika virus samples. The files are about 2MB in size each. The test
+run takes about 15s to run on my laptop with a standard WiFi connection. If you are running with 
+Conda for the first time, it may take a little longer as it will need to create the appropriate
+conda environments.
