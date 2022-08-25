@@ -1,3 +1,11 @@
+## TLDR
+
+!!! tldr "List the datasets, and specify the dataset to download using the `--key` flag"
+    ```bash
+        nextflow run lgi-onehealth/ph-datasets --list
+        nextflow run lgi-onehealth/ph-datasets [-profile <conda|docker>] --key Se-1203NYJAP-1
+    ```
+
 ## The basic workflow
 
 A typical run of the workflow will look like this:
