@@ -48,6 +48,22 @@ nextflow run lgi-onehealth/ph-datasets --key SC2-voivoc [-profile <conda|docker>
 
 The `-profile` portion is optional. You should use it if you don't have all the tools installed in your `$PATH`.
 
+## Update the workflow
+
+To ensure you are always up to date with the latest version of the workflow, you can add the `-latest` flag to the command. For example:
+
+```bash
+nextflow run lgi-onehealth/ph-datasets -latest [-profile <conda|docker>] --key SC2-voivoc
+```
+
+## Run a specific version of the workflow
+
+To specify a specific commit or tag of the workflow to run, use the `-r` option. For example:
+
+```bash
+nextflow run lgi-onehealth/ph-datasets -r v0.1.0 [-profile <conda|docker>] --key SC2-voivoc
+```
+
 ## The workflow outputs
 
 The workflow will create, by default, a folder called `datasets` in the directory that you run the workflow from.
