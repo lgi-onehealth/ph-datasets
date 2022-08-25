@@ -69,7 +69,7 @@ The workflow will create, by default, a folder called `datasets` in the director
 
 In the that folder, there will be three subfolders:
 
-* `fastq` - contains the raw fastq files organised into subfolders named after the accession
+* `fastq` - contains the fastq files organised into subfolders named after the accession, as well as the JSON output from `phcue-ck` with the URL information for each FASTQ file
 * `metadata` - contains three files:
   * `metadata.csv` - contains the metadata for the dataset as provided by the repository, with one row per sample/accession
   * `metadataset.yml` - contains the key:value metadata for the dataset as provided in the header of the datafile in the repository
