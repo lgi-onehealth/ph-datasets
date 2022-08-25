@@ -3,7 +3,6 @@ nav:
   - "index.md"
   - "installation.md"
   - "usage.md"
-  - "examples.md"
 copyright: "Lighthouse Genomics, Inc. 2022"
 site_url: https://lgi-onehealth.github.io/ph-datasets/
 repo_url: "https://github.com/lgi-onehealth/ph-datasets"
