@@ -8,15 +8,13 @@
 
 ## The basic workflow
 
-A typical run of the workflow will look like this:
+A typical run of the workflow will have two steps. First, you list the available datasets:
 
 ```bash
 nextflow run lgi-onehealth/ph-datasets --list
 ```
 
-The above command will output a list of all the available datasets. 
-
-Here is an excerpt of what it will look like:
+Here is an excerpt of what the output will look like:
 
 ```bash
 ---------------------------------------------
@@ -40,13 +38,14 @@ description: SARS-CoV-2 VOI/VOC sequence data
 ---------------------------------------------
 ```
 
-Once you determine the key of the dataset you want to download, you can run the workflow with the following command:
+In the second step, one uses the key of the dataset they wish to download to tell the workflow which data to retrieve. Assuming you decided on the `SC2-voivoc` dataset, this is done with the following command:
 
 ```bash
 nextflow run lgi-onehealth/ph-datasets --key SC2-voivoc [-profile <conda|docker>]
 ```
 
-The `-profile` portion is optional. You should use it if you don't have all the tools installed in your `$PATH`.
+!!! Note
+    The `-profile` portion is optional. You should use it if you don't have all the tools installed in your `$PATH`.
 
 ## Update the workflow
 
