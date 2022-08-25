@@ -1,0 +1,20 @@
+/* @media (prefers-color-scheme: light){
+    body {
+       background: white;
+    }
+ }
+
+[data-md-color-scheme="light"] {
+    --md-primary-fg-color:        #df678cff;
+    --md-primary-fg-color--light: #df678cff;
+    --md-primary-fg-color--dark:  #3d155fff;
+    color: #3d155fff;  
+}
+
+[data-md-color-scheme="dark"] {
+    --md-primary-fg-color:        #3d155fff;
+    --md-primary-fg-color--light: #3d155fff;
+    --md-primary-fg-color--dark:  #df678cff;
+    color: white;
+    background-color: black;
+} */
